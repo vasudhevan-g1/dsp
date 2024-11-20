@@ -1,0 +1,33 @@
+# DSP-LAB-10
+
+#ADDITION USING DIRECT ADDRESSSING MODE
+
+PROGRAM:
+
+ INP1    .SET 0H 
+INP2    .SET 1H 
+OUT     .SET 2H 
+.mmregs 
+.text 
+START: 
+LD   #140H,DP 
+RSBX   CPL 
+NOP 
+NOP 
+NOP 
+NOP 
+LD       INP1,A 
+ADD    INP2,A 
+STL      A,OUT 
+HLT:   B HLT 
+
+INPUT:
+
+ Data Memory:
+ A000h  0004 
+A001h  0004 
+
+OUTPUT:
+
+ Data Memory : 
+A002h  0008
